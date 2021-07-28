@@ -51,11 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastruture\DbFactory.cs" />
+    <Compile Include="Infrastruture\Disposable.cs" />
+    <Compile Include="Infrastruture\IDbFactory.cs" />
+    <Compile Include="Infrastruture\IRepository.cs" />
+    <Compile Include="Infrastruture\IUnitOfWork.cs" />
+    <Compile Include="Infrastruture\RepositoryBase.cs" />
+    <Compile Include="Infrastruture\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="TeduShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
+      <Project>{fcab22d8-a1bc-480b-98f7-16e265b61987}</Project>
+      <Name>TeduShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj">
+      <Project>{cc793a57-b645-4e03-ada5-ff53585940ee}</Project>
+      <Name>TeduShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
